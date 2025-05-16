@@ -2,7 +2,7 @@
 name1=CBN
 name2=YSR
 
-echo "$1 says:Hi $name2"
-echo "$2 says:Hi $name1"
+echo "$name1 says:Hi $name2"
+echo "$name2 says:Hi $name1"
 
 
