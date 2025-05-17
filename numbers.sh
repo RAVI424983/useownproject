@@ -7,6 +7,5 @@ time=$(date)
 echo "time stamp is :$time"
 
 sum =$(($number1+$number2))
-
 echo "the sum of two numbers :$sum"
 
