@@ -9,7 +9,6 @@ exit 1
 else
 echo "your using root access" 
 fi
-
 dnf list installed nginx
 if [ $? -ne 0]
 then
@@ -17,9 +16,8 @@ echo "nginx is not installed "
 dnf install nginx
 validate $? "nginx"
 else
-echo"nginx is already installed"
+echo "nginx is already installed"
 fi
-
 validate ()
 {
     if [ $1 -ne 0 ]
