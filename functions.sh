@@ -11,7 +11,7 @@ echo "your using root access"
 fi
 
 dnf list installed nginx
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
 echo "nginx is not installed "
 dnf install nginx
@@ -32,7 +32,7 @@ validate ()
 }
 
 dnf list installed mysql
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
 echo " mysql is not installed"
 dnf install mysql
