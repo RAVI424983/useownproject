@@ -29,3 +29,12 @@ validate ()
    fi
 
 }
+dnf list installed mysql
+if [ $? -ne 0]
+then
+echo " mysql is not installed"
+dnf install mysql
+validate $? "myql"
+else
+echo " mysql is not installed due to error"
+fi
