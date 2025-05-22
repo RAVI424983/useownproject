@@ -9,6 +9,7 @@ exit 1
 else
 echo "your using root access" 
 fi
+
 dnf list installed nginx
 if [ $? -ne 0]
 then
@@ -29,6 +30,7 @@ validate ()
    fi
 
 }
+
 dnf list installed mysql
 if [ $? -ne 0]
 then
