@@ -1,0 +1,8 @@
+  - name: gathering facts
+    hosts:  local
+    connection: local
+    become: yes
+    tasks:
+      - name: printing facts about server
+        ansible.builtin.debug:
+          msg:  "print {{ ansible_facts }}"
