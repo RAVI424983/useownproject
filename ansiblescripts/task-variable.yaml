@@ -1,0 +1,13 @@
+  - name: example to print task variable
+    hosts:  local
+    Connection: local
+    vars:
+      Name: raju
+      Age:  26
+    tasks:
+      name: print task variable
+      vars:
+        Name: Ravi
+        Age:  25
+        ansible.builtin.debug:
+          msg:  " hello {{ Name}},How are you , your age is {{ Age }} "      
