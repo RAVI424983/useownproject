@@ -1,0 +1,11 @@
+  - name: example for play variable
+    hosts:  local
+    connection: local
+    vars:
+      Name: Ravi
+      Age:  25
+    tasks:
+      - name: using play variables
+        ansible.builtin.debug:
+          msg:  "hello {{ Name }}, your age is {{ Age }}"
+          
