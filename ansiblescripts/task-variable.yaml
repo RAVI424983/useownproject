@@ -1,12 +1,19 @@
-  - name: example to print task variable
-    hosts:  local
+- name: play level variables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: DevOps with AWS
+    DURATION: 10HR
+    TRAINER: Sivakumar
+  tasks:
+  - name: print course information
     vars:
-      Name: raju
-      Age:  26
-    tasks:
-      name: print task variable
-      vars:
-        Name: Ravi
-        Age:  25
-        ansible.builtin.debug:
-          msg:  " hello {{ Name}},How are you , your age is {{ Age }} "      
+      COURSE: Ansible
+    ansible.builtin.debug:
+    #vars refernce should be surrounded by ""
+      msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
+
+  - name: print course information again
+    ansible.builtin.debug:
+    #vars refernce should be surrounded by ""
+      msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
