@@ -1,6 +1,6 @@
   - name: example to print task variable
     hosts:  local
-    connection: local
+    connections: local
     vars:
       Name: raju
       Age:  26
