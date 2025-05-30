@@ -1,5 +1,5 @@
   - name: "configuring for Catalogue server"
-    hosts:  Catalogue
+    hosts:  catalogue
     become: yes
     tasks:
       - name: "disabling nodejs server"
