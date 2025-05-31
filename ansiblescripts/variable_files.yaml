@@ -3,7 +3,6 @@
     connection: local
     var_files:
     - course.yaml
-
     tasks:
       - name: "describing course info"
         ansible.builtin.debug:
