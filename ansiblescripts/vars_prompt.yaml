@@ -1,0 +1,22 @@
+  - name: example to access variable value through prompt
+    hosts:  local
+    connection: local
+    vars_prompt:
+      - name: username
+        prompt: "Enter your username"
+        private:  false
+
+      - name: password
+        prompt: "Enter your password"
+        private:  true
+
+    tasks:
+      - name: printing user and password information
+        ansible.builtin.debug:
+          msg:  "hi {{ username }}, your password is {{ password }}"
+
+
+
+
+
+  
