@@ -1,12 +1,11 @@
   - name: "example to describe the usage of var file"
     hosts:  local
     connection: local
-    var_file:
-      course.yaml
+    var_files:
+    - course.yaml
 
     tasks:
       - name: "describing course info"
         ansible.builtin.debug:
           msg:  "hello {{ Course }},duration is{{ Duration }},trainer is {{ Trainer }}"
-          
-            
+
